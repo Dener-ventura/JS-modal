@@ -15,7 +15,10 @@ window.addEventListener("DOMContentLoaded", function(){
     }
     
     openButtons.forEach(function (openButton) {
-        openButton.addEventListener("click", openModal)
+        openButton.addEventListener("click", function(){
+            openModal();
+            setTimeout(closeModal, 3000);
+        })
     });
     
     function closeModal(){
